@@ -15,11 +15,10 @@ This toy example uses:
 
 The script registers forward hooks on selected layers (convolutional, linear, and batch normalization layers) to collect the energy of activations from each sample. It then computes the AUROC score per layer comparing ID vs. OOD activations, plots these scores in network order, and highlights any intermediate layer that outperforms the final fully-connected (fc) layer.
 
-After running the script, you will obtain a **bar plot** with the AUROC calculated for each layer of the model:
+After running the script, you will obtain a **bar plot** with the AUROC calculated for each layer of the model. The **dotted line** indicates the AUROC of the final layer. Green layers are the ones that beat the final layer.
 
 ![Example AUROC Plot](./figures/auroc_scores_cifar10_svhn.png)
 
-The dotted line indicates the AUROC of the final layer. Green layers are the ones that beat the final layer. 
 ---
 
 ## 🎯 Motivation
