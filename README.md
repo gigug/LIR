@@ -3,7 +3,9 @@ This is the source code for the paper Leveraging Intermediate Representations fo
 
 The paper explores how intermediate layer embeddings can be more discriminative for OoD detection than the penultimate and final layers, and proposes methods to either aggregate these signals or regularize them during training.
 
-<img src="./figures/explainer.png" alt="Explainer" width="400" class="center"/>
+<p align="center">
+    <img src="./figures/explainer.png" alt="Explainer" width="400"/>
+</p>
 
 ---
 
