@@ -166,7 +166,7 @@ def compute_auroc(id_labels, id_scores, layer_order, ood_labels, ood_scores):
 
         try:
             auroc = roc_auc_score(labels, scores)
-            # Adjust if AUROC is below 0.5 (i.e., OOD is detected as ID)
+            # Adjust if AUROC is below 0.5 (i.e., energies for ID and OOD are inversely correlated on that layer).
             if auroc < 0.5:
                 auroc = 1 - auroc
         except Exception:

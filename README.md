@@ -3,7 +3,7 @@ This is the source code for the paper Leveraging Intermediate Representations fo
 
 The paper explores how intermediate layer embeddings can be more discriminative for OoD detection than the penultimate and final layers, and proposes methods to either aggregate these signals or regularize them during training.
 
-![Explainer](./figures/explainer.png)
+<img src="./figures/explainer.png" alt="Explainer" width="200"/>
 ---
 
 ## 📌 Overview
@@ -15,10 +15,11 @@ This toy example uses:
 
 The script registers forward hooks on selected layers (convolutional, linear, and batch normalization layers) to collect the energy of activations from each sample. It then computes the AUROC score per layer comparing ID vs. OOD activations, plots these scores in network order, and highlights any intermediate layer that outperforms the final fully-connected (fc) layer.
 
-After running the script, you will obtain a **bar plot** similar to the following:
+After running the script, you will obtain a **bar plot** with the AUROC calculated for each layer of the model:
 
 ![Example AUROC Plot](./figures/auroc_scores_cifar10_svhn.png)
 
+The dotted line indicates the AUROC of the final layer. Green layers are the ones that beat the final layer. 
 ---
 
 ## 🎯 Motivation
