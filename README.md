@@ -28,7 +28,7 @@ After running the script, you will obtain a **bar plot** with the AUROC calculat
 
 In many real-world applications, neural networks may encounter data that do not belong to the distribution on which they were trained. Detecting such OoD samples is critical to prevent unsafe decisions in areas such as autonomous driving, healthcare, or finance. Traditional methods mostly rely on the final layer (logits or penultimate features) for OoD detection. However, as highlighted in the paper, the rich information contained in intermediate layers can provide earlier and more robust signals for OoD detection. One of the advantages is to serve as an early stop to avoid computational overhead.  
 
-This repository offers a simplified, easy-to-run implementation of these ideas.
+This repository offers a simplified, easy-to-run implementation of these ideas, which shows how intermediate layers respond well to discrimination between most combinations of ID/OoD datasets.
 
 ---
 
